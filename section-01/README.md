@@ -489,11 +489,10 @@ typedef struct {
 ```C
 matrix_t matrix_transpose(matrix_t m) {
     matrix_t mt = create_matrix(m.cols, m.rows); //<- assume this has been implemented
-    if (!t.data) return t;
 
     for (int i = 0; i < m.rows; ++i) {
         for (int j = 0; j < m.cols; ++j) {
-            t.data[j * m.rows + i] = m.data[i * m.cols + j];
+            mt.data[j * m.rows + i] = m.data[i * m.cols + j];
         }
     }
 
@@ -620,6 +619,12 @@ Unlike stack variables, heap allocations persist until you `free()` them, which 
 
 > [!NOTICE]  
 > There are many embedded C coding style standards that _prohibit_ the use of the heap. On DFR, we will NOT use the heap memory. We will allocate all memory at compile time.
+
+Watch these videos and take notes:
+
+[Why is the heap so slow?](https://youtu.be/ioJkA7Mw2-U?si=UwgI6zQFzPDU4FOT)
+
+[Why is the stack so fast?](https://youtu.be/N3o5yHYLviQ?si=aX_xVDUACLnrXvqu)
 
 ### Stack memory
 
