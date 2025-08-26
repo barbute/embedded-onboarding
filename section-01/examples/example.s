@@ -28,7 +28,8 @@ _main:                                  ; @main
 	bl	_printf
 	ldur	w8, [x29, #-8]
 	subs	w8, w8, #1
-	b.le	LBB0_6
+	cset	w8, le
+	tbnz	w8, #0, LBB0_6
 	b	LBB0_1
 LBB0_1:
 	ldur	w8, [x29, #-8]
@@ -49,10 +50,12 @@ LBB0_2:                                 ; =>This Inner Loop Header: Depth=1
 	ldur	w8, [x29, #-20]
 	ldur	w9, [x29, #-8]
 	subs	w8, w8, w9
-	b.ge	LBB0_5
+	cset	w8, ge
+	tbnz	w8, #0, LBB0_5
 	b	LBB0_3
 LBB0_3:                                 ;   in Loop: Header=BB0_2 Depth=1
 	ldur	w8, [x29, #-20]
+                                        ; implicit-def: $x10
 	mov	x10, x8
 	ldur	x8, [x29, #-16]
 	ldursw	x9, [x29, #-20]
