@@ -98,17 +98,7 @@ int main(void) {
   while (1) {
     /* USER CODE END WHILE */
 
-    /**
-
-    Blinky exercise: 
-
-
-    Don't write code outside the while loop.
-
-    
-    Delete this comment and write your code here.
-    
-    */
+    HAL_GPIIO_WritePin();
 
     /* USER CODE BEGIN 3 */
   }
