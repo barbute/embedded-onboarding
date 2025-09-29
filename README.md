@@ -4,6 +4,8 @@ A collection of tutorials to help with the onboarding process for the embedded s
 
 These were created due to the need for an industry-ready embedded systems tutorial that succinctly provides the necessary context and lays the foundation for systems programming in a sequential and structured manner. They follow a learning progression inspired by Bloom’s Taxonomy, moving from conceptually remembering to understanding to applying, and then, finally, to creating.
 
+#### _Consider giving this repository a ☆ if you found it helpful!_
+
 ## Disclosure
 
 1\. This onboarding is designed to guide you and not spoonfeed you. You are encouraged to actively engage with the presented material, look up unfamiliar terms and consult external resources like Google, datasheets, technical manuals, and vendor websites.
@@ -38,7 +40,7 @@ If you're using Windows, you'll need a compatible environment to follow along ef
 
 1. Using MSYS2's MINGW64 environment: This provides a Unix-like shell for Windows.
 
-2. Windows Subsystem for Linux (WSL): Provides a native Linux environment on Windows. Suitable for most development workflows.
+2. **Windows Subsystem for Linux (WSL): Provides a native Linux environment on Windows. Suitable for most development workflows. (Recommended) ** 
 
 3. Dual Boot Setup: Install Linux alongside Windows and choose your operating system at startup.
    > Note: If you are setting up a dual boot alongside Windows, make sure you have access to your Microsoft account because you will need to your Bitlocker decryption key otherwise you will lose all your data.
@@ -59,7 +61,7 @@ You can also see the Windows setup [guide](SETUP.md) I wrote when we migrated fr
 | 05      | Hardware and Signal Processing | ++++       | Analog and digital signals and converting between the two. Basics of EMI mitigation. Signal processing and filtering basics. Introduction to filtering. CMSIS libraries. Debugging with JTAG and OpenOCD. Creating the IOC and pinout. |
 | 06      | Final Project                  | +++        | Create a rudimentary data acquisition system; no hardware design required. Send information with print over UART.                                                                                                                      |
 
-#### _Consider giving this repository a ☆ if you found it helpful!_
+
 
 ## References
 

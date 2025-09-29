@@ -703,6 +703,11 @@ int* p1 = calloc(n, sizeof(type));
 
 The pointer itself still exists, as a "dangling pointer". Its value still points to the same memory address, but that memory address is now no longer allocated.
 
+```C
+int* ptr = 1;
+free(ptr);
+```
+
 Ending the object’s lifetime invalidates all pointers to the object ~instantaneously, and therefore any use of a dangling pointer whatsoever. Even `printf("%p")` is undefined behavior.
 
 `free` is not guaranteed. In fact, none of the memory functions are guaranteed -- `malloc` can fail if there is not enough memory in reserve to afford it.
